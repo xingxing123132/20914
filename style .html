@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>화합물 구조 시각화기</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <h1>🧪 화합물 구조 시각화기</h1>
+      <form id="form">
+        <label for="compoundName">🔍 화합물 이름</label>
+        <input type="text" id="compoundName" placeholder="예: acetic acid, benzene, aspirin" required />
+        <button type="submit">구조 시각화</button>
+      </form>
+    </div>
+
+    <div class="card" id="resultCard" style="display: none;">
+      <h2>🧬 분자 구조</h2>
+      <p id="smilesText"></p>
+      <canvas id="structureCanvas" width="300" height="300"></canvas>
+    </div>
+  </div>
+
+  <!-- SmilesDrawer 라이브러리 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/smiles-drawer@2.0.1/dist/smiles-drawer.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
